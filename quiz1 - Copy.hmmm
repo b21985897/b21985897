@@ -1,0 +1,13 @@
+0 read r1 #falling time
+1 read r2 #initial position
+2 read r3 #initial velocity
+3 setn r4 -10 #gravity
+4 setn r5 2 #for divide
+5 mul r6 r1 r1 # falling time*falling time
+6 mul r6 r6 r4 # falling time*gravity*falling time
+7 div r6 r6 r5 # divide 2 all numarator
+8 mul r3 r3 r1 # initial velocity*falling time
+9 add r6 r6 r3 # add all of them
+10 add r6 r6 r2 # add all of them
+11 write r6 #print
+12 halt
